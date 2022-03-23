@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full my-[50px]">
     <h1 class="mb-12 text-6xl u-text-white font-bold">
       Todo List.
     </h1>
