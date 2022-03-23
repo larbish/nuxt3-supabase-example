@@ -1,5 +1,7 @@
 # Todo list example using Supabase and Nuxt3
 
+Check live demo: https://scintillating-nasturtium-d15b41.netlify.app/
+
 - Frontend:
   - [Nuxt 3](https://v3.nuxtjs.org/) - a Vuejs framework.
   - [Tailwind](https://tailwindcss.com/) for styling and layout.
