@@ -1,6 +1,6 @@
 <template>
   <div class="w-full my-[50px]">
-    <h1 class="mb-12 text-6xl u-text-white font-bold">
+    <h1 class="mb-12 text-6xl font-bold u-text-white">
       Todo List.
     </h1>
     <form class="flex gap-2 my-2" @submit.prevent="addTask">
@@ -28,8 +28,8 @@
           class="border-gray-200 divide-y divide-gray-200"
         >
           <div class="py-4">
-            <UFormGroup label-class="block font-medium u-text-gray-700" wrapper-class="w-full flex justify-between items-center" :label="task.title" :name="`task${index}`">
-              <div class="flex justify-between items-center">
+            <UFormGroup label-class="block font-medium u-text-gray-700" wrapper-class="flex items-center justify-between w-full" :label="task.title" :name="`task${index}`">
+              <div class="flex items-center justify-between">
                 <UToggle
                   v-model="task.completed"
                   :name="`task${index}`"
@@ -38,7 +38,7 @@
                   @click="updateTask(task)"
                 />
                 <UButton
-                  class="text-red-600"
+                  class="ml-3 text-red-600"
                   size="sm"
                   variant="transparent"
                   icon="heroicons-outline:trash"
@@ -55,6 +55,10 @@
 
 <script setup lang="ts">
 import { Task } from '~~/types/tasks'
+
+definePageMeta({
+  middleware: 'auth'
+})
 
 const client = useSupabaseClient()
 const user = useSupabaseUser()
