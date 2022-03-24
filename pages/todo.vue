@@ -27,8 +27,8 @@
           :class="{ 'border-b': index !== tasks.length - 1 }"
           class="border-gray-200 divide-y divide-gray-200"
         >
-          <div class="py-4">
-            <UFormGroup label-class="block font-medium u-text-gray-700" wrapper-class="flex items-center justify-between w-full" :label="task.title" :name="`task${index}`">
+          <div class="py-2">
+            <UFormGroup :label-class="`block font-medium u-text-gray-700 ${task.completed && 'line-through'}`" wrapper-class="flex items-center justify-between w-full" :label="task.title" :name="`task${index}`">
               <div class="flex items-center justify-between">
                 <UToggle
                   v-model="task.completed"
@@ -45,7 +45,7 @@
                   @click="removeTask(task)"
                 />
               </div>
-            </uformgroup>
+            </UFormGroup>
           </div>
         </li>
       </ul>
@@ -54,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { Task } from '~~/types/tasks'
+import { Task } from '~/types/tasks'
 
 definePageMeta({
   middleware: 'auth'

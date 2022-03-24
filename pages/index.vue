@@ -23,7 +23,7 @@
             label="Github"
             variant="black"
             :loading="loading"
-            @click.native="login('github')"
+            @click="login('github')"
           />
         </div>
       </div>

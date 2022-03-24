@@ -1,6 +1,6 @@
-# Todo list example using Supabase and Nuxt3
+# Todo list example using Supabase and Nuxt 3
 
-Check live demo: https://scintillating-nasturtium-d15b41.netlify.app/
+Live demo: https://n3-supabase.netlify.app
 
 - Frontend:
   - [Nuxt 3](https://v3.nuxtjs.org/) - a Vuejs framework.
@@ -16,6 +16,17 @@ Make sure to install the dependencies
 ```bash
 yarn install
 ```
+
+Fill the `.env` with the Supabase environement variables:
+
+```
+SUPABASE_URL="https://example.supabase.com"
+SUPABASE_KEY="<your_key>"
+```
+
+In your Supabase project, make sure to create the `tasks` table with the following fields:
+
+![tasks_table](https://user-images.githubusercontent.com/7290030/159882068-c88b96da-6e2f-4d9b-8523-4a4270b1b05e.png)
 
 ## Development
 
